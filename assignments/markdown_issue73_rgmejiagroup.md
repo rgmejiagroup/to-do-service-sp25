@@ -14,7 +14,7 @@ curl http://localhost:3000/tasks
   }
 ]
 
-****## Example 2 – Create a Task using Postman****
+## Example 2 – Create a Task using Postman
 
 **Request**
 - Method: POST  
