@@ -15,3 +15,4 @@ before you start your first tutorial.
 * [Get user by user ID](./tutorials/get-user-by-user-id.md)
 * [Get a user by last name](tutorials/get-a-user-by-last-name.md)
 * [Delete a task by ID](tutorials/delete-task-by-id.md)
+* [Update a task by ID](./tutorials/patch-update-task.md)
