@@ -46,6 +46,7 @@ After your system is ready, these tutorials show you how to perform common tasks
 * [Get a user by last name](tutorials/get-a-user-by-last-name.md)
 * [Change the due-date of a task _(coming soon)_](#tutorials)
 * [Delete a user](tutorials/delete-a-user-Kusuma.md)
+* [Update a task](tutorials/update-a-task.md)
 * [Delete a task _(coming soon)_](#tutorials)
 
 ## API reference docs
