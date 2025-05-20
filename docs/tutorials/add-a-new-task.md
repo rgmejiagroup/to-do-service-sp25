@@ -4,51 +4,68 @@ layout: page
 
 # Tutorial: Add a new task
 
-In this tutorial, you learn the operations to call to
-add a new task for a user of the service.
+In this tutorial you'll learn you how to
+add a new [`task`](../api/task.md) in the To-Do Service API.
 
-Expect this tutorial to take about 15 minutes to complete.
+The tutorial should take about 10 minutes to complete.
 
 ## Before you start
 
-Make sure you've completed the [Before you start a tutorial](../before-you-start-a-tutorial.md) topic on the development system you'll use for the tutorial.
+Make sure you've completed [Before you start a tutorial](../before-you-start-a-tutorial.md) and set up your development system.  
+
+When you finish setting up your development system, you should have the server running locally at `http://localhost:3000`. To check that it's running, or to restart it after ending a session, use this command:
+
+```shell
+cd <your-github-workspace>/to-do-service/api
+    json-server -w to-do-db-source.json
+```
+
+If your server is running, you'll see this:
+
+```text
+Type s + enter at any time to create a snapshot of the database
+Watching...
+```
 
 ## Add a new task
 
-Adding a new task to the service requires that you use the `POST` method to store the details of the new [`task`](../api/task.md) resource in the service.
+Use the `POST` method to add a task in the To-Do Service. Here's how to send the request with both Postman and cURL.
 
-To add a new task:
+### Using Postman
 
-1. Make sure your local service is running, or start it by using this command, if it's not.
+In the Postman desktop app, navigate to **Create a New API Request** and select **New Request**. Give the new request the following values.
 
-    ```shell
-    cd <your-github-workspace>/to-do-service/api
-    json-server -w to-do-db-source.json
-    ```
+* **METHOD**: POST
+* **URL**: `{base_url}/tasks`
+* **Headers**:
+    * `Content-Type: application/json`  
+* **Request Body**:
 
-1. Open the Postman app on your desktop.
-1. In the Postman app, create a new request with these values:
-    * **METHOD**: POST
-    * **URL**: `{{base_url}}/tasks`
-    * **Headers**:
-        * `Content-Type: application/json`
-    * **Request body**:
-        You can change the values of each property as you'd like.
+```json
+    {
+        "user_id": 3,
+        "title": "Get new tires",
+        "description": "Get new tires for Hoppity",
+        "due_date": "2025-03-11T14:00",
+        "warning": "-60"
+    }
+```
 
-        ```js
-        {
-            "user_id": 3,
-            "title": "Get new tires",
-            "description": "Get new tires for Hoppity",
-            "due_date": "2025-03-11T14:00",
-            "warning": "-60"
-        }
-        ```
+Change the JSON values to fit your new task, and click **Send**.
 
-1. In the Postman app, choose **Send** to make the request.
-1. Watch for the response body, which should look something like this. Note that the names should be the same as you used in your **Request body** and the response should include the new user's `id`.
+### Using cURL
 
-    ```js
+If you'd rather use cURL in command line, here's what the same request looks like.
+
+```shell
+curl -X POST "{base_url}/tasks" -H "Content-Type: application/json" -d "{\"user_id\": 3, \"title\": \"Get new tires\", \"description\": \"Get new tires for Hoppity\", \"due_date\": \"2025-03-11T14:00\", \"warning\": \"-60\"}"
+```
+
+## Example response
+
+Whether you use Postman or cURL, if the request is successful, you'll get a JSON response that looks like this:
+
+```json
     {
         "user_id": 3,
         "title": "Get new tires",
@@ -57,9 +74,30 @@ To add a new task:
         "warning": "-60",
         "id": 5
     }
-    ```
+```
 
-After doing this tutorial in Postman, you might like to repeat it in
-your favorite programming language. To do this, adapt the values from
-the tutorial to the properties and arguments that the language uses to
-make REST API calls.
+This response is the same as the body of the request, except that it includes an `id` property, which contains the unique identifier of the task resource you just created. You can now retrieve the new task by sending a `GET` request to `/tasks/{id}`. Here's what that request looks like in Postman:
+
+```text
+GET http://localhost:3000/tasks/5
+```
+
+And in cURL:
+
+```shell
+curl http://localhost:3000/tasks/5
+```
+
+The JSON response returned is the same as the one returned by the `POST` request.
+
+## Troubleshooting
+
+Here are a couple of errors your might run into.
+
+* `404: Not Found` most likely means an error in the URL. Try checking and re-entering it.
+
+* `Could not send request` means the local server isn't running and needs to restart.
+
+## Next steps
+
+Now that you can add tasks, learn how to [enroll a new user](https://uwc2-apidoc.github.io/to-do-service-sp25/tutorials/enroll-a-new-user.html).
