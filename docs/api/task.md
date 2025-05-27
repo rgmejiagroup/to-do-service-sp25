@@ -55,3 +55,7 @@ Sample `task` resource
 ## Update
 
 * [Put task by ID](./tasks-put-task-by-id.md)
+
+## Delete
+
+* [Delete a task by ID](./tasks-delete-id.md)
