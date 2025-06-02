@@ -1,4 +1,4 @@
-# GET /tasks
+`# GET /tasks`
 
 Retrieves a list of all tasks in the system.
 
