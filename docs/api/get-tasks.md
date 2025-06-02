@@ -23,7 +23,7 @@ Use this endpoint to:
 
 ---
 
-## Example Request
+## Example request
 
 ```bash
 curl http://localhost:3000/tasks
