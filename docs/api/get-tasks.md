@@ -17,6 +17,7 @@ This operation takes no parameters.
 ## Purpose
 
 Use this endpoint to:
+
 - View all tasks
 - Display task lists in a client or dashboard
 - Export or report task data
