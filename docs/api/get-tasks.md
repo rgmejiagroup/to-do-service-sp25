@@ -9,7 +9,8 @@ Retrieves a list of all tasks in the system.
 **Method:** GET  
 **URL:** http://localhost:3000/tasks
 
-No authentication or parameters are required.
+This operation requires no authentication.
+This operation takes no parameters.
 
 ---
 
