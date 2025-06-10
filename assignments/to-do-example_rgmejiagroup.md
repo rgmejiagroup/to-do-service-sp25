@@ -29,7 +29,10 @@ curl http://localhost:3000/tasks
   "title": "New Task from Postman",
   "completed": false
 }
+```
 
+**Response**
+```
 {
   "id": 2,
   "title": "New Task from Postman",
