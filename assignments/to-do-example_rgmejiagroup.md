@@ -5,7 +5,9 @@
 **Request**
 ```bash
 curl http://localhost:3000/tasks
+```
 
+**Response**
 [
   {
     "id": 1,
