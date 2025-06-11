@@ -33,3 +33,12 @@ More guides and references are coming soon. In the meantime:
 - Try basic examples using `curl` or Postman in the assignments section  
 - Explore how the API supports authentication and error handling  
 - Check out additional use cases and sample requests
+
+## Where to go next
+
+More guides and references are coming soon. In the meantime:
+
+- Try basic examples using `curl` or Postman in the assignments section  
+- [How to update a task using PATCH](../tutorials/patch-update-task.md)  
+- Explore how the API supports authentication and error handling  
+- Check out additional use cases and sample requests
