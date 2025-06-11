@@ -1,4 +1,4 @@
-# To-Do API overview
+# To-do API overview
 
 ## Welcome to the To-Do API
 
@@ -6,7 +6,7 @@ The To-Do API helps developers integrate task tracking into their applications. 
 
 ## Who is this for?
 
-The API is designed for:
+Use this API if you are:
 
 - Developers building productivity apps or dashboards  
 - Teams creating workflow automation tools  
@@ -22,13 +22,13 @@ You can:
 
 ## Why use this API?
 
-- Easy to understand and implement  
+- Simple and quick to use 
 - RESTful design with clear endpoints  
 - Ideal for hands-on learning and real-world use  
 
 ## Where to go next
 
-More guides and reference materials will be available soon. In the meantime:
+More guides and references are coming soon. In the meantime:
 
 - Try basic examples using `curl` or Postman in the assignments section  
 - Explore how the API supports authentication and error handling  
